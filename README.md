@@ -1,19 +1,16 @@
 # CAN-Examples
-Example C code for SocketCAN on Linux
+Przykład użycia SocketCAN w URVEBoardzie A18 PRO (Linux/Rockchip 3288)
+ 
 
 * Based on documentation at: https://www.kernel.org/doc/Documentation/networking/can.txt
 * A simplified tutorial can be found at: https://www.beyondlogic.org/example-c-socketcan-code/
 * Hardcoded to use the vcan0 virtual CAN device.
 
-To install VCAN0:
+ Aby skompilować przykład użyj /opt/gcc/bin/arm-linux-gnueabihf-cpp:
 ```
-$ ip link add dev vcan0 type vcan
-```
-Use gcc to build examples:
-```
-$ gcc cantransmit.c -o cantransmit
+$ /opt/gcc/bin/arm-linux-gnueabihf-cpp cantransmit.c -o cantransmit
 
-$ gcc canreceive.c -o canreceive
+$ /opt/gcc/bin/arm-linux-gnueabihf-cpp canreceive.c -o canreceive
 
-$ gcc canfilter.c -o canfilter
+$ /opt/gcc/bin/arm-linux-gnueabihf-cpp canfilter.c -o canfilter
 ```
